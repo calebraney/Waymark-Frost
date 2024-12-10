@@ -89,7 +89,7 @@ export const scrollIn = function (gsapContext) {
     const tween = defaultTween(splitText.words, tl, { stagger: 'small', skew: 'large' });
     //add event calleback to revert text on completion
     tl.eventCallback('onComplete', () => {
-      splitText.revert();
+      // splitText.revert();
     });
   };
 
