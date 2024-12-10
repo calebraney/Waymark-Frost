@@ -1,6 +1,8 @@
 import { attr } from './utilities';
 import { hoverActive } from './interactions/hover-active';
+import { textScrub } from './interactions/text-scrub';
 import { scrollIn } from './interactions/scroll-in';
+import { parallax } from './interactions/parallax';
 
 document.addEventListener('DOMContentLoaded', function () {
   // Comment out for production
@@ -35,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function () {
         //conditional interactions
         if (!reduceMotion) {
           scrollIn(gsapContext);
+          textScrub(gsapContext);
+          parallax(gsapContext);
         }
       }
     );
