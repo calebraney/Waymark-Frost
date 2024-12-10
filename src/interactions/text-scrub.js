@@ -5,10 +5,7 @@ export const textScrub = function (gsapContext) {
   const ANIMATION_ID = 'textscrub';
   //elements
   const ITEM = '[data-ix-textscrub="item"]';
-  //option for active class and default class
-  const HOVER_ACTIVE_CLASS = 'data-ix-textscrub-class';
-  const ACTIVE_CLASS = 'is-active';
-  // get all links without a no-hover attribute and any other elements with a hover attribute into an array
+  //element selector
   const items = gsap.utils.toArray(ITEM);
   items.forEach((item) => {
     if (!item) return;
@@ -18,6 +15,7 @@ export const textScrub = function (gsapContext) {
     //add event listener to item
     const splitText = runSplit(item, 'lines');
     if (!splitText) return;
+    splitText.lines.forEach((line) => {});
   });
 };
 /*
